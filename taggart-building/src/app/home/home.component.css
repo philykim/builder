@@ -1,7 +1,7 @@
 .hero {
   text-align: center;
   padding: 50px 20px;
-  background-color: #e9ecef;
+  background-color: #f8f9fa;
 }
 
 .hero h2 {
@@ -9,17 +9,39 @@
   margin-bottom: 20px;
 }
 
-.services {
+.hero p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.services, .testimonials {
   padding: 50px 20px;
-}
-
-.services h3 {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 30px;
 }
 
-.service-cards {
+.services h3, .testimonials h3 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.service-cards, .testimonial-cards {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -27,14 +49,47 @@
 }
 
 .card {
+  background-color: white;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
+  border-radius: 8px;
+  padding: 25px;
+  width: 350px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h4 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.card p {
+  flex-grow: 1;
+  color: #555;
+  line-height: 1.5;
+}
+
+.testimonials .card {
+  background-color: #e9ecef;
+}
+
+.testimonials .card p {
+  font-style: italic;
+}
+
+.card cite {
+  display: block;
+  text-align: right;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #007bff;
 }
