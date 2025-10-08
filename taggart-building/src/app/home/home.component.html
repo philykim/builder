@@ -25,26 +25,10 @@
 
   <section class="testimonials">
     <h3>What Our Clients Say</h3>
-    <div class="testimonial-cards">
-      <div class="card">
-        <p>"I recently had work done by Taggart building and remodel to redo my bathrooms and they have exceeded my expectations in the work they did. When Nelson came out he was so well detail oriented and may I say he really knows his stuff. I went into this with an idea of how I wanted these bathrooms to come out and he did exactly that and some. 10/10 I would definitely recommend for any remodel work needed."</p>
-        <cite>- Dulce E.</cite>
-      </div>
-      <div class="card">
-        <p>"Andrew and his crew were amazing. We did our bathroom remodel and was without a doubt a great decision. They were punctual and their attention to detail was amazing. Easy communication and always with a happy smile. Would recommend for any remodel needs."</p>
-        <cite>- William E.</cite>
-      </div>
-      <div class="card">
-        <p>"They are absolutely amazing. They removed the carpet and installed tile! They were very clean and professional. Their project manager Nelson was absolutely amazing. He reassured me the job would be done with in my time frame! Great customer service and very professional. I would recommend them to do any of my home projects!"</p>
-        <cite>- Kim F.</cite>
-      </div>
-      <div class="card">
-        <p>"I recently hired Taggart Building & Remodeling to renovate both my kitchen and bathroom, and I couldn’t be happier with the results... What really stood out was their willingness to listen to my ideas and offer creative solutions within my budget. If you’re looking for a team that delivers on both craftsmanship and customer service, I highly recommend Taggart Building & Remodeling."</p>
-        <cite>- Daniella H.</cite>
-      </div>
-      <div class="card">
-        <p>"Andrew and his team did a great job remodeling our bathroom. The design process was creative and definitely helped, we’re really happy with the results."</p>
-        <cite>- Scott B.</cite>
+    <div class="testimonial-cards" *ngIf="testimonials$ | async as testimonials">
+      <div class="card" *ngFor="let testimonial of testimonials">
+        <p>"{{ testimonial.text }}"</p>
+        <cite>- {{ testimonial.author }}</cite>
       </div>
     </div>
   </section>
