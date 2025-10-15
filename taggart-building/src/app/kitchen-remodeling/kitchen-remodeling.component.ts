@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-kitchen-remodeling',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './kitchen-remodeling.component.html',
   styleUrls: ['./kitchen-remodeling.component.css']
 })
