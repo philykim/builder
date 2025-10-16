@@ -17,7 +17,6 @@ export class KitchenRemodelingComponent {
     'assets/images/kitchen-remodeling/kitchen-5.webp',
     'assets/images/kitchen-remodeling/kitchen-6.webp',
     'assets/images/kitchen-remodeling/kitchen-7.webp',
-    'assets/images/kitchen-remodeling/kitchen-8.webp',
-    'assets/images/kitchen-remodeling/kitchen-9.webp'
+    'assets/images/kitchen-remodeling/kitchen-8.webp'
   ];
 }
