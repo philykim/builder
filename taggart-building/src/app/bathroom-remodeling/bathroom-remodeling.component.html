@@ -1,9 +1,6 @@
 <div class="container">
   <h2>Bathroom Remodeling</h2>
   <div class="image-gallery">
-    <img src="assets/images/bathroom-remodeling/bathroom1.png" alt="Bathroom 1">
-    <img src="assets/images/bathroom-remodeling/bathroom2.png" alt="Bathroom 2">
-    <img src="assets/images/bathroom-remodeling/bathroom3.png" alt="Bathroom 3">
-    <img src="assets/images/bathroom-remodeling/bathroom4.png" alt="Bathroom 4">
+    <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt">
   </div>
 </div>

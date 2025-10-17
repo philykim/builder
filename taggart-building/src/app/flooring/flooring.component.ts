@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageService, Image } from '../image.service';
 
 @Component({
   selector: 'app-flooring',
@@ -8,6 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './flooring.component.html',
   styleUrl: './flooring.component.css'
 })
-export class FlooringComponent {
+export class FlooringComponent implements OnInit {
+  images: Image[] = [];
 
+  constructor(private imageService: ImageService) { }
+
+  ngOnInit(): void {
+    this.images = this.imageService.getImages('flooring');
+  }
 }

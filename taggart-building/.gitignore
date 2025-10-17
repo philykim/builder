@@ -43,3 +43,6 @@ Thumbs.db
 
 # Log files
 ng_serve.log
+
+# Generated files
+src/app/generated-image-data.ts

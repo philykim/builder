@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageService, Image } from '../image.service';
 
 @Component({
   selector: 'app-kitchen-remodeling',
@@ -8,15 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './kitchen-remodeling.component.html',
   styleUrls: ['./kitchen-remodeling.component.css']
 })
-export class KitchenRemodelingComponent {
-  images = [
-    'assets/images/kitchen-remodeling/kitchen-1.webp',
-    'assets/images/kitchen-remodeling/kitchen-2.webp',
-    'assets/images/kitchen-remodeling/kitchen-3.webp',
-    'assets/images/kitchen-remodeling/kitchen-4.webp',
-    'assets/images/kitchen-remodeling/kitchen-5.webp',
-    'assets/images/kitchen-remodeling/kitchen-6.webp',
-    'assets/images/kitchen-remodeling/kitchen-7.webp',
-    'assets/images/kitchen-remodeling/kitchen-8.webp'
-  ];
+export class KitchenRemodelingComponent implements OnInit {
+  images: Image[] = [];
+
+  constructor(private imageService: ImageService) { }
+
+  ngOnInit(): void {
+    this.images = this.imageService.getImages('kitchen-remodeling');
+  }
 }
