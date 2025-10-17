@@ -13,6 +13,7 @@ export class ImageService {
   constructor() { }
 
   getImages(category: string): Image[] {
+    console.log('IMAGE_DATA:', IMAGE_DATA);
     return IMAGE_DATA[category] || [];
   }
 }

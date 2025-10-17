@@ -25,6 +25,110 @@ export const IMAGE_DATA: { [category: string]: { src: string; alt: string }[] } 
   ],
   "bathroom-remodeling": [
     {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-1.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-10.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-11.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-12.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-13.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-14.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-15.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-16.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-17.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-18.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-19.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-2.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-20.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-21.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-22.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-23.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-24.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-25.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-26.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-3.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-4.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-5.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-6.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-7.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-8.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
+      "src": "assets/images/bathroom-remodeling/bathroom-remodeling-9.webp",
+      "alt": "Bathroom Remodeling"
+    },
+    {
       "src": "assets/images/bathroom-remodeling/bathroom1.png",
       "alt": "Bathroom Remodeling"
     },
