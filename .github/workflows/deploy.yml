@@ -24,10 +24,10 @@ jobs:
         run: cd taggart-building && npm install
 
       - name: Build
-        run: cd taggart-building && npm run build
+        run: cd taggart-building && npm run build:gh-pages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: taggart-building/dist/taggart-building
+          publish_dir: taggart-building/docs

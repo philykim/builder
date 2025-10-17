@@ -7,6 +7,7 @@
     "start": "ng serve",
     "prebuild": "node generate-image-data.js",
     "build": "ng build",
+    "build:gh-pages": "ng build --output-path docs --base-href=/taggart-building/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
