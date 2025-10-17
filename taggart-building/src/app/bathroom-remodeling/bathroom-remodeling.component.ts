@@ -15,6 +15,6 @@ export class BathroomRemodelingComponent implements OnInit {
   constructor(private imageService: ImageService) { }
 
   ngOnInit(): void {
-    this.images = this.imageService.getImages('general');
+    this.images = this.imageService.getImages('bathroom-remodeling');
   }
 }
