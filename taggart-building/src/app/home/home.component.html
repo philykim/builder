@@ -1,47 +1,82 @@
-<main>
-  <section class="hero">
-    <h2>High-End Home Remodeling</h2>
-    <p>At Taggart Building & Remodeling, we specialize in high-end remodeling that transforms spaces into luxurious retreats. Our team combines artistry and craftsmanship to deliver exceptional results tailored to your vision. We pride ourselves on our personalized approach, using only the finest materials and innovative design techniques. Our commitment to quality and customer satisfaction sets us apart, ensuring every project reflects your style and enhances your home.</p>
-    <a routerLink="/contact" class="cta-button">Get a Quote</a>
-  </section>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Experienced General Contractor</h1>
+    <p>Whether you are looking to upgrade your home, repair your home after a recent storm, or modernize your home with a fresh coat of paint. Here at Taggart Building & Remodeling, we are a team of general contractors that specialize in a variety of home restoration and improvement services.</p>
+    <a routerLink="/contact" class="button">Contact Us For A Free Quote</a>
+  </div>
+</section>
 
-  <section class="services">
-    <h3>Our Services</h3>
-    <div class="service-cards">
-      <a routerLink="/kitchen-remodeling" class="card-link">
-        <div class="card">
-          <h4>Kitchen Remodeling</h4>
-          <p>Transform your kitchen into a beautiful and functional space.</p>
-        </div>
-      </a>
-      <a routerLink="/bathroom-remodeling" class="card-link">
-        <div class="card">
-          <h4>Bathroom Remodeling</h4>
-          <p>Transform your bathroom into a beautiful and functional space.</p>
-        </div>
-      </a>
-      <a routerLink="/flooring" class="card-link">
-        <div class="card">
-          <h4>Flooring</h4>
-          <p>Expert installation of a wide range of flooring materials.</p>
-        </div>
-      </a>
-      <a routerLink="/basement-remodeling" class="card-link">
-        <div class="card">
-          <h4>Basement Remodeling</h4>
-          <p>Turn your basement into a finished, usable living space.</p>
-        </div>
-      </a>
+<section class="welcome section">
+  <div class="container">
+    <div class="welcome-content">
+      <div class="welcome-text">
+        <h2>Welcome to Taggart Building & Remodeling</h2>
+        <p>
+          Whether you are looking to upgrade your home, repair your home after a
+          recent storm, or modernize your home with a fresh coat of paint. Here
+          at Taggart Building & Remodeling, we are a team of general contractors that
+          specialize in a variety of home restoration and
+          improvement services. Located in the heart of the city, we assist our
+          community with restoring their homes to brand new condition. Our
+          experienced team not only guarantees that you’ll be satisfied with the
+          results but also that your property’s value will increase. Call
+          today to schedule your home restoration, roofing,
+          or remodeling service.
+        </p>
+        <a routerLink="/about" class="button">Learn More</a>
+      </div>
+      <div class="welcome-image">
+        <img src="assets/images/kitchen-remodeling/1.webp" alt="Welcome Image">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="testimonials">
-    <h3>What Our Clients Say</h3>
+<section class="services section bg-light">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Services</h2>
+      <p>From remodeling to renovations, we have the services you need!</p>
+    </div>
+    <div class="service-cards">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <h4>Home Remodeling</h4>
+        <p>Exceeding industry standards in Home Remodeling. Each member of our team has been extensively educated in all aspects of construction.</p>
+        <a routerLink="/home-remodeling" class="read-more">Learn more...</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h4>Kitchen Remodeling</h4>
+        <p>We are a full-service Kitchen Remodeler providing high-quality services for years. We ensure outstanding customer care.</p>
+        <a routerLink="/kitchen-remodeling" class="read-more">Learn more...</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-bath"></i>
+        </div>
+        <h4>Bathroom Remodeling</h4>
+        <p>We will do more than just transform your bathroom – we’ll give it a whole new look, too! Maximizing space and functionality.</p>
+        <a routerLink="/bathroom-remodeling" class="read-more">Learn more...</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>What Our Clients Say</h2>
+    </div>
     <div class="testimonial-cards" *ngIf="testimonials$ | async as testimonials">
       <div class="card" *ngFor="let testimonial of testimonials">
         <p>"{{ testimonial.text }}"</p>
         <cite>- {{ testimonial.author }}</cite>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>

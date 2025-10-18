@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Observable, of } from 'rxjs';
 import { Testimonial, TestimonialService } from '../testimonial.service';
-import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  testimonials$: Observable<Testimonial[]> | undefined;
+  testimonials$: Observable<Testimonial[]>;
 
-  constructor(private testimonialService: TestimonialService) { }
+  constructor(private testimonialService: TestimonialService) {
+    this.testimonials$ = of([]);
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.testimonials$ = this.testimonialService.getTestimonials();
   }
 }

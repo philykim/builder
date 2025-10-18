@@ -1,19 +1,33 @@
 import { Injectable } from '@angular/core';
-import { IMAGE_DATA } from './generated-image-data';
+import { of, Observable } from 'rxjs';
+import { ALL_IMAGES } from './generated-image-data';
 
 export interface Image {
-  src: string;
+  url: string;
   alt: string;
+  title: string;
+  description: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ImageService {
+
   constructor() { }
 
-  getImages(category: string): Image[] {
-    console.log('IMAGE_DATA:', IMAGE_DATA);
-    return IMAGE_DATA[category] || [];
+  getImages(category: string): Observable<Image[]> {
+    const images = (ALL_IMAGES as any)[category] || [];
+    return of(images);
+  }
+
+  getAllImages(): Observable<Image[]> {
+    let allImages: Image[] = [];
+    for (const category in ALL_IMAGES) {
+      if (Object.prototype.hasOwnProperty.call(ALL_IMAGES, category)) {
+        allImages = allImages.concat((ALL_IMAGES as any)[category]);
+      }
+    }
+    return of(allImages);
   }
 }

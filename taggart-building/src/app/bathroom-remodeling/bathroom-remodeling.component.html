@@ -1,6 +1,24 @@
-<div class="container">
-  <h2>Bathroom Remodeling</h2>
-  <div class="image-gallery">
-    <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt">
-  </div>
+<div class="remodeling-container">
+  <section class="remodeling-hero">
+    <div class="hero-content">
+      <h1>Bathroom Remodeling</h1>
+      <p>Create a sanctuary in your own home with our expert bathroom remodeling services.</p>
+    </div>
+  </section>
+
+  <section class="remodeling-content section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Bathroom Remodeling Services</h2>
+      </div>
+      <p>
+        From simple updates to complete overhauls, we can transform your bathroom into a stylish and functional retreat. We handle everything from new vanities and countertops to custom tile work and spa-like showers. Our design team will help you choose the perfect fixtures and finishes to create a space that is both beautiful and practical.
+      </p>
+      <div class="image-gallery" *ngIf="images$ | async as images">
+        <div class="image-item" *ngFor="let image of images">
+          <img [src]="image.url" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
