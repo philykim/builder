@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test:
+  unit-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,8 +27,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: Run tests
+      - name: Run unit tests
         run: |
           export CHROME_BIN=/usr/bin/google-chrome-stable
           cd taggart-building
           npx ng test --watch=false --browsers=ChromeHeadless
+  e2e-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: cd taggart-building && npm install
+
+      - name: Install Cypress dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+
+      - name: Run e2e tests
+        run: |
+          cd taggart-building
+          npm run e2e
