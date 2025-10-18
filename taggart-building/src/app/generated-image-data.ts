@@ -169,6 +169,14 @@ export const IMAGE_DATA: { [category: string]: { src: string; alt: string }[] } 
       "alt": "Kitchen Remodeling"
     },
     {
+      "src": "assets/images/kitchen-remodeling/kitchen-10.png",
+      "alt": "Kitchen Remodeling"
+    },
+    {
+      "src": "assets/images/kitchen-remodeling/kitchen-11.jpg",
+      "alt": "Kitchen Remodeling"
+    },
+    {
       "src": "assets/images/kitchen-remodeling/kitchen-2.webp",
       "alt": "Kitchen Remodeling"
     },
@@ -194,6 +202,10 @@ export const IMAGE_DATA: { [category: string]: { src: string; alt: string }[] } 
     },
     {
       "src": "assets/images/kitchen-remodeling/kitchen-8.webp",
+      "alt": "Kitchen Remodeling"
+    },
+    {
+      "src": "assets/images/kitchen-remodeling/kitchen-9.png",
       "alt": "Kitchen Remodeling"
     }
   ]
