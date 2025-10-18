@@ -39,6 +39,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "start-server-and-test": "^2.1.2",
+    "tsx": "^4.20.6",
     "typescript": "~5.4.2",
     "wait-on": "^9.0.1"
   }
