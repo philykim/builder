@@ -59,4 +59,5 @@ jobs:
       - name: Run e2e tests
         run: |
           cd taggart-building
+          export NODE_OPTIONS=--import=tsx
           npm run e2e
