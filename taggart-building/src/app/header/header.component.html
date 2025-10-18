@@ -1,21 +1,31 @@
-<header>
-  <nav>
+<header [class.scrolled]="isScrolled">
+  <div class="container">
     <div class="logo">
-      <img src="assets/logo.jpg" alt="Taggart Building & Remodeling Inc. Logo">
+      <a routerLink="/"><img src="assets/logo.png" alt="Taggart Building & Remodeling Inc. Logo"></a>
     </div>
-    <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li class="dropdown">
-        <a>Services</a>
-        <div class="dropdown-content">
-          <a routerLink="/bathroom-remodeling">Bathroom Remodeling</a>
-          <a routerLink="/kitchen-remodeling">Kitchen Remodeling</a>
-          <a routerLink="/flooring">Flooring</a>
-          <a routerLink="/basement-remodeling">Basement Remodeling</a>
-        </div>
-      </li>
-      <li><a routerLink="/contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li class="dropdown">
+          <a>Services</a>
+          <div class="dropdown-content">
+            <a routerLink="/bathroom-remodeling">Bathroom Remodeling</a>
+            <a routerLink="/kitchen-remodeling">Kitchen Remodeling</a>
+            <a routerLink="/flooring">Flooring</a>
+            <a routerLink="/basement-remodeling">Basement Remodeling</a>
+          </div>
+        </li>
+        <li><a routerLink="/gallery">Gallery</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-contact">
+      <div class="phone-number">
+        <i class="fas fa-phone"></i>
+        <span>(774) 440-2050</span>
+      </div>
+      <a routerLink="/contact" class="btn btn-primary">Free Quote</a>
+    </div>
+  </div>
 </header>

@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { Image, ImageService } from '../image.service';
+import { Observable, of } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { ImageService, Image } from '../image.service';
 
 @Component({
   selector: 'app-bathroom-remodeling',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './bathroom-remodeling.component.html',
-  styleUrl: './bathroom-remodeling.component.css'
+  styleUrls: ['./bathroom-remodeling.component.css']
 })
 export class BathroomRemodelingComponent implements OnInit {
-  images: Image[] = [];
+  images$: Observable<Image[]>;
 
-  constructor(private imageService: ImageService) { }
+  constructor(private imageService: ImageService) {
+    this.images$ = of([]);
+  }
 
-  ngOnInit(): void {
-    this.images = this.imageService.getImages('bathroom-remodeling');
+  ngOnInit() {
+    this.images$ = this.imageService.getImages('bathroom-remodeling');
   }
 }

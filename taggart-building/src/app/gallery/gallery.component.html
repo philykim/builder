@@ -1,0 +1,25 @@
+<div class="gallery-container">
+  <section class="gallery-hero">
+    <div class="hero-content">
+      <h1>Our Work</h1>
+      <p>A showcase of our finest remodeling and renovation projects.</p>
+    </div>
+  </section>
+
+  <section class="gallery-grid section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Project Gallery</h2>
+      </div>
+      <div class="image-grid" *ngIf="images$ | async as images">
+        <div class="image-item" *ngFor="let image of images">
+          <img [src]="image.url" [alt]="image.alt">
+          <div class="overlay">
+            <h3>{{ image.title }}</h3>
+            <p>{{ image.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

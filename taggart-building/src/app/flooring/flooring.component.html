@@ -1,8 +1,24 @@
-<div class="container">
-  <h1>Flooring</h1>
-  <div class="gallery">
-    <div *ngFor="let image of images" class="gallery-item">
-      <img [src]="image.src" [alt]="image.alt">
+<div class="remodeling-container">
+  <section class="remodeling-hero">
+    <div class="hero-content">
+      <h1>Flooring</h1>
+      <p>Expert installation of a wide range of flooring materials.</p>
     </div>
-  </div>
+  </section>
+
+  <section class="remodeling-content section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Flooring Services</h2>
+      </div>
+      <p>
+        The right flooring can completely transform the look and feel of a room. We offer a wide selection of flooring options, including hardwood, laminate, vinyl, tile, and carpet. Our experienced installers will ensure that your new floor is installed to the highest standards, providing a durable and beautiful foundation for your home.
+      </p>
+      <div class="image-gallery" *ngIf="images$ | async as images">
+        <div class="image-item" *ngFor="let image of images">
+          <img [src]="image.url" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

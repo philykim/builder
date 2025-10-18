@@ -1,7 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #0d2c4f;
+  --secondary-color: #d4a373;
+  --accent-color: #fde428;
+  --light-gray-color: #f8f9fa;
+  --dark-gray-color: #343a40;
+  --text-color: #495057;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+  color: var(--text-color);
+  background-color: var(--white-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -9,30 +23,65 @@ body {
 
 main {
   flex: 1;
+  padding: 2rem 0;
 }
 
 a {
-  color: #007bff;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--secondary-color);
 }
 
-.cta-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 0.8rem 1.5rem;
+  border: none;
   border-radius: 5px;
-  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #0056b3;
+.button:hover {
+  background-color: var(--primary-color);
 }
 
-.card-link {
-  text-decoration: none;
-  color: inherit;
+.text-center {
+  text-align: center;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+  font-size: 1.1rem;
+  color: var(--dark-gray-color);
 }

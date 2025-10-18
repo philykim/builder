@@ -9,6 +9,7 @@
 # Node
 /node_modules
 npm-debug.log
+npm_output.log
 yarn-error.log
 
 # IDEs and editors
@@ -46,3 +47,5 @@ ng_serve.log
 
 # Generated files
 # src/app/generated-image-data.ts
+
+*jules-scratch

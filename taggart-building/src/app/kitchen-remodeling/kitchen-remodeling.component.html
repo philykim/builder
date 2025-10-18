@@ -1,5 +1,24 @@
-<div class="gallery">
-  <div *ngFor="let image of images" class="gallery-item">
-    <img [src]="image.src" [alt]="image.alt">
-  </div>
+<div class="remodeling-container">
+  <section class="remodeling-hero">
+    <div class="hero-content">
+      <h1>Kitchen Remodeling</h1>
+      <p>The heart of your home deserves to be beautiful and functional.</p>
+    </div>
+  </section>
+
+  <section class="remodeling-content section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Kitchen Remodeling Services</h2>
+      </div>
+      <p>
+        The kitchen is the heart of the home, and we believe it should be a space that is both beautiful and functional. We offer a full range of kitchen remodeling services, from custom cabinetry and countertops to state-of-the-art appliances and lighting. Our team will work with you to create a kitchen that meets your family's needs and reflects your personal style.
+      </p>
+      <div class="image-gallery" *ngIf="images$ | async as images">
+        <div class="image-item" *ngFor="let image of images">
+          <img [src]="image.url" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

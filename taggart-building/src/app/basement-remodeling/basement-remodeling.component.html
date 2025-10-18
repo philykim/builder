@@ -1,7 +1,24 @@
-<div class="container">
-  <h1>Basement Remodeling</h1>
-  <p>Transform your basement into a beautiful and functional living space. We specialize in creating custom basement designs that meet your unique needs and style. Whether you're looking for a home theater, a playroom for the kids, a home office, or an extra bedroom, we can help you make the most of your basement space.</p>
-  <div class="gallery">
-    <img *ngFor="let image of images" [src]="image.src" [alt]="image.alt">
-  </div>
+<div class="remodeling-container">
+  <section class="remodeling-hero">
+    <div class="hero-content">
+      <h1>Basement Remodeling</h1>
+      <p>Transform your basement into a beautiful and functional living space.</p>
+    </div>
+  </section>
+
+  <section class="remodeling-content section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Basement Remodeling Services</h2>
+      </div>
+      <p>
+        A finished basement is a great way to add value and space to your home. Whether you're looking to create a home theater, a playroom for the kids, a home gym, or a guest suite, we can help you design and build the basement of your dreams. Our team will work with you to maximize your space and create a comfortable and inviting area that your family will enjoy for years to come.
+      </p>
+      <div class="image-gallery" *ngIf="images$ | async as images">
+        <div class="image-item" *ngFor="let image of images">
+          <img [src]="image.url" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
