@@ -1,40 +1,31 @@
-<header>
-  <div class="top-bar">
-    <div class="container">
-      <div class="contact-info">
-        <span><i class="fas fa-phone"></i> (508) 356-5050</span>
-        <span><i class="fas fa-envelope"></i> info&#64;gabremodeling.com</span>
-      </div>
-      <div class="social-media">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+<header [class.scrolled]="isScrolled">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/"><img src="assets/logo.png" alt="Taggart Building & Remodeling Inc. Logo"></a>
     </div>
-  </div>
-  <div class="main-nav">
-    <div class="container">
-      <div class="logo">
-        <img src="assets/logo.jpg" alt="Taggart Building & Remodeling Inc. Logo">
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li class="dropdown">
+          <a>Services</a>
+          <div class="dropdown-content">
+            <a routerLink="/bathroom-remodeling">Bathroom Remodeling</a>
+            <a routerLink="/kitchen-remodeling">Kitchen Remodeling</a>
+            <a routerLink="/flooring">Flooring</a>
+            <a routerLink="/basement-remodeling">Basement Remodeling</a>
+          </div>
+        </li>
+        <li><a routerLink="/gallery">Gallery</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-contact">
+      <div class="phone-number">
+        <i class="fas fa-phone"></i>
+        <span>(508) 356-5050</span>
       </div>
-      <nav>
-        <ul>
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/about">About</a></li>
-          <li class="dropdown">
-            <a>Services</a>
-            <div class="dropdown-content">
-              <a routerLink="/bathroom-remodeling">Bathroom Remodeling</a>
-              <a routerLink="/kitchen-remodeling">Kitchen Remodeling</a>
-              <a routerLink="/flooring">Flooring</a>
-              <a routerLink="/basement-remodeling">Basement Remodeling</a>
-            </div>
-          </li>
-          <li><a routerLink="/gallery">Gallery</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-        </ul>
-      </nav>
+      <a routerLink="/contact" class="btn btn-primary">Free Quote</a>
     </div>
   </div>
 </header>
