@@ -18,6 +18,10 @@ jobs:
           node-version: '18.19.0'
           npm-version: '10'
 
+      - name: Clear Caches
+        run: |
+          npm cache clean --force
+          rm -rf ~/.cache/Cypress
       - name: Install dependencies
         run: cd taggart-building && npm install
 
